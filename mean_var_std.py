@@ -1,5 +1,11 @@
 import numpy as np
 
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+
 def calculate(list_of_numbers):
     if len(list_of_numbers) != 9:
         raise ValueError("List must contain nine numbers.")
